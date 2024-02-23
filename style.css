@@ -7,7 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: white;
 }
 
@@ -17,6 +17,86 @@ body {
 
 header {
   background-color: var(--doc-red);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+}
+
+header * {
+  text-align: center;
+}
+
+header > h1 {
+  font-size: 1rem;
+  margin-top: 3vh;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+h1 > span {
+  margin: 2vh 0 3vh;
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 4vh;
+}
+
+h2 + p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+h3 + p {
+  font-size: 3.5r-of-type:not(.dropdown + p)em;
+  font-weight: 700;
+}
+
+ul + button {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dropdown > button,#myDropdown > a {
+  font-size: 20px;
+}
+
+.unite {
+  font-size: 22px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+article {
+  border-radius: 10px;
+  width: 90vw;
+  height: 608px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article:last-child {
+  margin-bottom: 20vh;
 }
 
 article, button {
@@ -74,6 +154,10 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 li::marker {
   color: var(--doc-red);
 }
@@ -88,4 +172,9 @@ button:hover, button:focus {
 
 .dropdown + p {
   color: var(--doc-red);
+  font-size: 14px;
+}
+
+article:last-child p {
+  font-size: 2.25rem;
 }
