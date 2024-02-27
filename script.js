@@ -6,4 +6,4 @@
   } else {
      text.style.fontWeight = "400";
   }
-}
+}*/
