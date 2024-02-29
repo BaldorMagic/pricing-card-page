@@ -88,7 +88,6 @@ section {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
   gap: 30px;
 }
 
@@ -103,6 +102,7 @@ article {
 
 ul {
   line-height: 41px;
+  list-style-position: inside;
 }
 
 article:first-of-type ul {
@@ -181,10 +181,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-ul {
-  list-style-position: inside;
-}
-
 li::marker {
   color: var(--doc-red);
 }
@@ -201,6 +197,8 @@ select {
   color: #fff;
   cursor: pointer;
   background-color: var(--doc-gray);
+  font-size: 1.25rem;
+  padding-left: 47.5px;
 }
 select::-ms-expand {
   display: none;
@@ -209,7 +207,6 @@ select::-ms-expand {
   position: relative;
   display: flex;
   width: 20em;
-  height: 3em;
   border-radius: .25em;
   overflow: hidden;
   background-color: var(--doc-gray);
@@ -217,30 +214,31 @@ select::-ms-expand {
 .select::after {
   content: url("data:image/svg+xml,%3Csvg width='23px' height='23px' viewBox='0 0 1024 1024' class='icon' version='1.1' xmlns='http://www.w3.org/2000/svg' fill='%235C6268' stroke='%235C6268' stroke-width='61.44'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z' fill='%235C6268'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
   position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 0;
-  right: 0;
-  padding: 1em;
+  top: 34%;
+  right: 15%;
   background-color: var(--doc-gray);
   transition: .25s all ease;
   pointer-events: none;
-}
-.select:hover::after {
-  color: #f39c12;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: absolute;
-  border: 1px solid #fff;
+  border: 1px solid #5C6268;
   border-radius: 3px;
   width: 297px;
   height: 68px;
+  margin-top: 20px;
 }
 
 .container + p {
   color: var(--doc-red);
   font-size: 14px;
+  margin-top: 8px;
+  margin-left: -115px;
+}
+
+article:nth-of-type(2) ul {
+  margin-top: 31px;
 }
